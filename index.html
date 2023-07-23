@@ -12,24 +12,53 @@
 </head>
 
 <body>
-  <header class="vh-100   d-flex   justify-content-center align-items-center">
-    <div class=" py-5  container d-flex  flex-column justify-content-center align-items-center">
-      <h1 class= ' py-5 fw-bolder'>Quote of the Day</h1>
-      <p class= ' py-3'>Press the button below to recieve a random quote!</p>
-      <button onclick="getRndQuote()" class= 'btn btn-outline-dark btn-lg' id="quoteGenerator">New Quote</button>
-      <p class= 'py-3 text-center' id="quote">"The best revenge is massive success."</p>
-      <p class='py-3 'id="quoteAouther">--Frank Sinatra</p>
-    
-    </div>
-    
+  <header class="d-flex justify-content-center align-items-center p-5">
+    <h1 >Bookmarker</h1>
   </header>
-  
 
+
+<div class="container border  border-black border-end-0 border-start-0  ">
+  <h2 class="text-center my-3"><i class="fa-solid fa-bookmark"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark"></i></h2>
+<div class="d-flex  flex-column">
+  <label for="siteName" class=" my-1"> <i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+  <input type="text" id="siteName" class=" my-1" placeholder="  Bookmark Name">
+</div>
+  <div class="d-flex  flex-column">
+    <label for="siteUrl" class=" my-1"> <i class="fa-solid fa-link"></i>  Site URL</label>
+<input type="text" id="siteUrl" class=" my-1" placeholder=" WebSite URL">
+  </div>
+
+<button type="button" onclick="add() ; " id="submit" class="  btn btn-dark  text-center my-3" >submit</button>
+
+</div>
+
+<div class="container my-3">
+  
+  <table class="table text-center">
+    <thead>
+      <th>Index</th>
+      <th>Website Name</th>
+      <th>Visit</th>
+      <th>Delete</th>
+    </thead>
+      
+    <tbody id="tableBody">
+      <tr>
+        <td></td>
+        <td></td>
+        <td><button type="button" onclick="visitSite(siteUrl)"; id="visit" class="btn  btn-success"> <i class="fa-solid fa-eye"></i>Visit</button></td>
+        <td><button type="button" onclick="deleteRow(i)"; id="delete" class="btn  btn-danger "><i class="fa-solid fa-trash-can"></i> Delete</button></td>
+      </tr>
+    </tbody>
+    
+    
+  </table>
+</div>
 
 
 
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/qoeute.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
